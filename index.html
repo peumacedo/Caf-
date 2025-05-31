@@ -2,103 +2,237 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Triagem Jurídica Inteligente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MÃOS DA TERRA – Café de Origem Chapada Diamantina</title>
+  <!-- Fontes e Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    /* Variáveis de cor personalizadas */
     :root {
-      --azul-petroleo: #083b4c;
-      --branco: #ffffff;
-      --cinza-claro: #f2f2f2;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: var(--azul-petroleo);
-      color: var(--branco);
-      font-family: Arial, sans-serif;
-      display: flex;
-      min-height: 100vh;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .container {
-      display: flex;
-      max-width: 900px;
-      width: 100%;
-      padding: 40px;
-      box-sizing: border-box;
-      justify-content: space-between;
-    }
-
-    .info {
-      max-width: 50%;
-    }
-
-    .info h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .info p {
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-
-    .info ul {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-
-    .info li {
-      margin-bottom: 8px;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        padding: 20px;
-      }
-
-      .info {
-        max-width: 100%;
-        margin-bottom: 30px;
-      }
+      --marrom-terra: #4B2E2E;
+      --bege-claro: #F5F1E8;
+      --verde-oliva: #556B2F;
+      --cinza-escuro: #333333;
     }
   </style>
 </head>
-<body>
-  <div class="container">
-    <div class="info">
-      <h1>Assistente Jurídico Inteligente</h1>
-      <p>Use o assistente jurídico automático para triagem de demandas consumeristas. Rápido, gratuito e disponível 24h por dia.</p>
+<body class="font-lato bg-bege-claro text-cinza-escuro">
 
-      <p><strong>Passo a passo:</strong></p>
-      <ul>
-        <li>1. Clique no ícone do chat no canto inferior direito</li>
-        <li>2. Informe sua dúvida ou situação</li>
-        <li>3. Receba orientação inicial e próximos passos</li>
-      </ul>
+  <!-- Header / Hero com fundo da Chapada Diamantina + folhas e frutos de café -->
+  <header class="relative h-screen">
+    <!-- Imagem de fundo: substitua o caminho conforme sua pasta de imagens -->
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style="background-image: url('imagens/chapada-diamantina-coffee.jpg');"
+    ></div>
+    <!-- Overlay semitransparente para garantir legibilidade -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      <p><strong>Funções do agente:</strong></p>
-      <ul>
-        <li>• Análise inicial da demanda</li>
-        <li>• Indicação de documentos</li>
-        <li>• Explicação dos direitos do consumidor</li>
-        <li>• Direcionamento para atendimento personalizado (caso necessário)</li>
-      </ul>
+    <!-- Conteúdo centralizado -->
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <div class="bg-black bg-opacity-60 p-8 rounded-lg text-center max-w-2xl">
+        <h1 class="font-raleway text-4xl md:text-6xl text-bege-claro mb-4">MÃOS DA TERRA</h1>
+        <p class="text-xl md:text-2xl text-bege-claro mb-6">
+          Do produtor à sua xícara: café de origem Chapada Diamantina
+        </p>
+        <a href="#comprar" class="bg-verde-oliva hover:bg-[#3f5926] text-bege-claro font-bold py-3 px-6 rounded">
+          Comprar Agora
+        </a>
+      </div>
     </div>
-  </div>
+  </header>
 
- <script type="module">
-  import Chatbox from 'https://cdn.jsdelivr.net/npm/@chatvolt/embeds@latest/dist/chatbox/index.js';
+  <!-- Benefícios -->
+  <section id="beneficios" class="py-16 px-4 md:px-0">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-raleway text-3xl mb-8">Por que escolher nosso café?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-4">
+          <h3 class="font-raleway text-xl mb-2 text-verde-oliva">Grãos de Origem Única</h3>
+          <p>
+            Seleção rigorosa de produtores na Chapada Diamantina, garantindo aroma e sabor exclusivos.
+          </p>
+        </div>
+        <div class="p-4">
+          <h3 class="font-raleway text-xl mb-2 text-verde-oliva">Torra Artesanal</h3>
+          <p>Processo artesanal sob pedido para manter frescor e notas aromáticas intensas.</p>
+        </div>
+        <div class="p-4">
+          <h3 class="font-raleway text-xl mb-2 text-verde-oliva">Embalagem Sustentável</h3>
+          <p>Embalagem craft com válvula, carimbo rústico e materiais recicláveis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  const widget = await Chatbox.initBubble({
-    agentId: 'cmb5imejh07mxd59xb31flmg3',
-  });
+  <!-- História / Storytelling -->
+  <section id="historia" class="bg-bege-claro py-16 px-4 md:px-0">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
+      <img
+        src="imagens/produtor-chapada.jpg"
+        alt="Produtor na Chapada"
+        class="w-full md:w-1/2 rounded-lg shadow-lg"
+      >
+      <div class="w-full md:w-1/2">
+        <h2 class="font-raleway text-3xl mb-4 text-marrom-terra">Nossa Jornada na Chapada</h2>
+        <p class="mb-4">
+          Na região exuberante da Chapada Diamantina, cada grão é cultivado por famílias que vivem do plantio de café há gerações.
+          Nosso elo direto com esses produtores garante qualidade, rastreabilidade e respeito ao meio ambiente.
+        </p>
+        <p>
+          Ao adquirir um pacote de <strong>MÃOS DA TERRA</strong>, você apoia comunidades locais e leva para a sua casa
+          um café diferenciado, colhido em altitudes que valorizam aromas complexos e notas frutadas.
+        </p>
+      </div>
+    </div>
+  </section>
 
-</script>
+  <!-- Como Funciona -->
+  <section id="como-funciona" class="py-16 px-4 md:px-0">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-raleway text-3xl mb-8">Como Funciona</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="p-4">
+          <img src="imagens/icones/selecao.svg" alt="Seleção" class="mx-auto mb-3 w-16 h-16">
+          <h3 class="font-raleway text-xl text-verde-oliva mb-2">Seleção</h3>
+          <p>Escolha dos melhores grãos direto do produtor.</p>
+        </div>
+        <div class="p-4">
+          <img src="imagens/icones/torra.svg" alt="Torra" class="mx-auto mb-3 w-16 h-16">
+          <h3 class="font-raleway text-xl text-verde-oliva mb-2">Torra</h3>
+          <p>Torra personalizada para cada perfil de sabor.</p>
+        </div>
+        <div class="p-4">
+          <img src="imagens/icones/envase.svg" alt="Envase" class="mx-auto mb-3 w-16 h-16">
+          <h3 class="font-raleway text-xl text-verde-oliva mb-2">Envase</h3>
+          <p>Embalagem artesanal com selo de frescor.</p>
+        </div>
+        <div class="p-4">
+          <img src="imagens/icones/entrega.svg" alt="Entrega" class="mx-auto mb-3 w-16 h-16">
+          <h3 class="font-raleway text-xl text-verde-oliva mb-2">Entrega</h3>
+          <p>Envio rápido e seguro em Salvador.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos / Ofertas -->
+  <section id="comprar" class="bg-bege-claro py-16 px-4 md:px-0">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="font-raleway text-3xl mb-8">Nossos Produtos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="border border-gray-300 rounded-lg shadow-md p-6 bg-white">
+          <img
+            src="imagens/kit-descoberta.jpg"
+            alt="Kit Descoberta"
+            class="w-full h-48 object-cover mb-4 rounded"
+          >
+          <h3 class="font-raleway text-2xl mb-2">Kit Descoberta</h3>
+          <p class="mb-4">4 pacotes de 250g para conhecer toda a diversidade da Chapada.</p>
+          <p class="font-bold text-xl mb-4">R$ 149,00</p>
+          <a href="#" class="block bg-verde-oliva hover:bg-[#3f5926] text-bege-claro font-bold py-2 px-4 rounded">Adicionar ao Carrinho</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="border border-gray-300 rounded-lg shadow-md p-6 bg-white">
+          <img
+            src="imagens/pacote-250g.jpg"
+            alt="Pacote 250g"
+            class="w-full h-48 object-cover mb-4 rounded"
+          >
+          <h3 class="font-raleway text-2xl mb-2">Pacote 250g</h3>
+          <p class="mb-4">Grãos recém-torrados em embalagem craft.</p>
+          <p class="font-bold text-xl mb-4">R$ 39,90</p>
+          <a href="#" class="block bg-verde-oliva hover:bg-[#3f5926] text-bege-claro font-bold py-2 px-4 rounded">Adicionar ao Carrinho</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="border border-gray-300 rounded-lg shadow-md p-6 bg-white">
+          <img
+            src="imagens/assinatura.jpg"
+            alt="Assinatura Mensal"
+            class="w-full h-48 object-cover mb-4 rounded"
+          >
+          <h3 class="font-raleway text-2xl mb-2">Assinatura Mensal</h3>
+          <p class="mb-4">Receba 1kg de café selecionado todo mês, frescor garantido.</p>
+          <p class="font-bold text-xl mb-4">R$ 129,00/mês</p>
+          <a href="#" class="block bg-verde-oliva hover:bg-[#3f5926] text-bege-claro font-bold py-2 px-4 rounded">Assinar Agora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="py-16 px-4 md:px-0">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-raleway text-3xl mb-8">Depoimentos</h2>
+      <div class="space-y-8">
+        <blockquote class="border-l-4 border-verde-oliva pl-4 italic">
+          “O melhor café que já experimentei! A sensação de frescor e aroma é indescritível. Recomendo a todos que buscam algo diferenciado.”
+          <footer class="mt-2 font-bold">– Ana Paula, Salvador</footer>
+        </blockquote>
+        <blockquote class="border-l-4 border-verde-oliva pl-4 italic">
+          “Como barista, fiquei impressionado com a qualidade dos grãos e o cuidado na torra. Vale cada centavo.”
+          <footer class="mt-2 font-bold">– Lucas Souza, Café do Centro</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chamada Secundária / Oferta Especial -->
+  <section id="oferta" class="bg-bege-claro py-16 px-4 md:px-0">
+    <div class="max-w-4xl mx-auto text-center bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="font-raleway text-3xl mb-4 text-marrom-terra">Oferta Exclusiva</h2>
+      <p class="mb-6">Use o cupom <strong>CHAPADA10</strong> e ganhe 10% de desconto no primeiro pedido.</p>
+      <a href="#comprar" class="bg-verde-oliva hover:bg-[#3f5926] text-bege-claro font-bold py-3 px-6 rounded">Aproveitar Desconto</a>
+    </div>
+  </section>
+
+  <!-- Sobre Nós / Contato -->
+  <section id="contato" class="py-16 px-4 md:px-0">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-start gap-8">
+      <div class="md:w-1/2">
+        <h2 class="font-raleway text-3xl mb-4 text-marrom-terra">Quem Somos</h2>
+        <p class="mb-4">
+          A MÃOS DA TERRA nasceu da paixão por cafés especiais e do compromisso com a sustentabilidade. 
+          Ligados à Chapada Diamantina, conectamos diretamente o produtor ao consumidor, garantindo preço justo e qualidade excepcional.
+        </p>
+        <p>
+          Nosso propósito é valorizar pequenas comunidades cafeeiras e proporcionar uma experiência única a cada xícara.
+        </p>
+      </div>
+      <div class="md:w-1/2">
+        <h2 class="font-raleway text-3xl mb-4 text-marrom-terra">Fale Conosco</h2>
+        <p class="mb-2"><strong>WhatsApp:</strong> (71) 9XXXX-XXXX</p>
+        <p class="mb-2"><strong>E-mail:</strong> contato@maosdaterra.com.br</p>
+        <p><strong>Instagram:</strong> @maosdaterra</p>
+        <!-- Formulário simples de captura de e-mail -->
+        <form class="mt-6">
+          <label for="email" class="block mb-2">Receba novidades e descontos:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="seu@email.com"
+            class="w-full border border-gray-300 rounded px-3 py-2 mb-4"
+            required
+          >
+          <button type="submit" class="bg-verde-oliva hover:bg-[#3f5926] text-bege-claro font-bold py-2 px-4 rounded w-full">
+            Cadastrar
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--marrom-terra)] text-bege-claro py-8 text-center">
+    <p>© 2025 MÃOS DA TERRA. Todos os direitos reservados.</p>
+    <nav class="mt-4">
+      <a href="#" class="mx-2 hover:underline">Política de Privacidade</a>
+      <a href="#" class="mx-2 hover:underline">Termos de Uso</a>
+    </nav>
+  </footer>
+
 </body>
 </html>
