@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Triagem Jurídica Inteligente</title>
+  <style>
+    :root {
+      --azul-petroleo: #083b4c;
+      --branco: #ffffff;
+      --cinza-claro: #f2f2f2;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--azul-petroleo);
+      color: var(--branco);
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      max-width: 900px;
+      width: 100%;
+      padding: 40px;
+      box-sizing: border-box;
+      justify-content: space-between;
+    }
+
+    .info {
+      max-width: 50%;
+    }
+
+    .info h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .info p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .info ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .info li {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .info {
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="info">
+      <h1>Assistente Jurídico Inteligente</h1>
+      <p>Use o assistente jurídico automático para triagem de demandas consumeristas. Rápido, gratuito e disponível 24h por dia.</p>
+
+      <p><strong>Passo a passo:</strong></p>
+      <ul>
+        <li>1. Clique no ícone do chat no canto inferior direito</li>
+        <li>2. Informe sua dúvida ou situação</li>
+        <li>3. Receba orientação inicial e próximos passos</li>
+      </ul>
+
+      <p><strong>Funções do agente:</strong></p>
+      <ul>
+        <li>• Análise inicial da demanda</li>
+        <li>• Indicação de documentos</li>
+        <li>• Explicação dos direitos do consumidor</li>
+        <li>• Direcionamento para atendimento personalizado (caso necessário)</li>
+      </ul>
+    </div>
+  </div>
+
+ <script type="module">
+  import Chatbox from 'https://cdn.jsdelivr.net/npm/@chatvolt/embeds@latest/dist/chatbox/index.js';
+
+  const widget = await Chatbox.initBubble({
+    agentId: 'cmb5imejh07mxd59xb31flmg3',
+  });
+
+</script>
+</body>
+</html>
